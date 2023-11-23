@@ -1,6 +1,7 @@
 package hello.hellospring;
 
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.service.MemberService;
@@ -22,4 +23,11 @@ public class SpringConfig {
     public MemberRepository memberRepository(){
         return new MemoryMemberRepository();
     }
+
+    // aop
+    // @Bean으로 생성하거나, TimeTraceAop에 @Component 등록하거나 한다.
+//    @Bean
+//    public TimeTraceAop timeTraceAop(){
+//        return new TimeTraceAop();
+//    }
 }
